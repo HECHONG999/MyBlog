@@ -9,8 +9,8 @@ const globalConfig = require("./config");
 let controllerSet = [];
 let map = new Map();        // Map数据结构:数据唯一特性 -- get和set方法获取或设置数据
 
-let dirs = fs.readdirSync(path.resolve(__dirname, globalConfig["web_path"]));  //readdirSync:同步读取文件的目录
-
+let dirs = fs.readdirSync(path.resolve("./", globalConfig["web_path"]));  //readdirSync:同步读取文件的目录
+console.log(dirs)
 /**
  * 读取web文件,封装url请求数据的业务逻辑接口
  * @param {*} dirs 
